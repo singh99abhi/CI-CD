@@ -22,10 +22,17 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
-           cd CI-CD
-           git pull origin main
-           npm install
-           npm run build
-           npm run start
+            echo "Checking running process on port 3000..."
+            sudo lsof -t -i:3000 | xargs -r kill -9
+
+            echo "Installing dependencies..."
+            npm install
+
+            echo "Building the app..."
+            npm run build
+
+            echo "Starting the app..."
+            npm run start
+
 
       
