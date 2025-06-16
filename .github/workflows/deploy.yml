@@ -21,20 +21,7 @@ jobs:
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
-          script: |
-            cd CI-CD
-            echo "Checking running process on port 3000..."
-            sudo lsof -t -i:3000 | xargs -r kill -9
-            git pull origin main
-
-            echo "Installing dependencies..."
-            npm install
-
-            echo "Building the app..."
-            npm run build
-
-            echo "Starting the app... lolo"
-            npm run start
+          script: ./deploy.sh
 
 
       
