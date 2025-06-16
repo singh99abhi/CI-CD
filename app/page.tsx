@@ -1,4 +1,9 @@
-import Image from "next/image";
+// Option 1: Use it
+
+
+// Option 2: Remove it if unused
+// just delete that line
+
 
 export default function Home() {
   return (
