@@ -22,6 +22,7 @@ jobs:
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
           script: |
+            cd CI-CD
             echo "Checking running process on port 3000..."
             sudo lsof -t -i:3000 | xargs -r kill -9
 
