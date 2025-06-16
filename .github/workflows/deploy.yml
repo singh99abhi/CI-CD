@@ -32,7 +32,7 @@ jobs:
             echo "Building the app..."
             npm run build
 
-            echo "Starting the app..."
+            echo "Starting the app... lolo"
             npm run start
 
 
