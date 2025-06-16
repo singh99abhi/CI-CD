@@ -17,7 +17,7 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
             
-          host: 172.31.28.210
+          host: 13.51.173.199
           username: ubuntu
           key: ${{ secrets.PRIVATE_SSH_KEY }}
           port: 22
